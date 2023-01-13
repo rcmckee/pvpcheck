@@ -1,14 +1,10 @@
 from setuptools import setup
   
-# with open('requirements.txt') as f:
-#     requirements = f.readlines()
-  
-long_description = 'Sample Package made for a demo \
-      of its making for the GeeksforGeeks Article.'
+long_description = 'Package to check if private repository libraries have a public doppelgaenger with the same name. The goal is to prevent a dependency confusion attack on the PyPi ecosystem.'
   
 setup(
         name ='pvpcheck',
-        version ='1.0.0',
+        version ='1.1.0',
         author ='Robert Cooper Buer McKee',
         author_email ='RCBM@duck.com',
         url ='https://github.com/rcmckee/pvpcheck',
@@ -19,7 +15,7 @@ setup(
         packages = ["pvpcheck"],
         entry_points ={
             'console_scripts': [
-                'pvpcheck = pvpcheck.pvpcheck:main'
+                'pvpcheck = pvpcheck.public_vs_private_pypi_check:main'
             ]
         },
         classifiers =(
